@@ -1,0 +1,36 @@
+---
+title: "Final Project Memo"
+author: "Kathryn Zamiela"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Microbiome Visualization Project
+
+Microbiome data from stool samples was sequenced using the 16S region.  Two hypervariable regions were used, V1-V3 and V3-V4.
+
+### Widgets
+
+- A dropdown allowing the user to select the level of taxonomy to use (Phylum, Class, etc)
+- A dropdown allowing the user to select a single entity ("Streptococcus")
+- A radio button allowing the user to select whether to visualize by binary groups or all groups
+
+Regarding the groups, the data was collected to primarily look at differences between breast cancer and no breast cancer.  However, additional data was collected for those with an abnormal mammogram but no breast cancer and those with no breast cancer but have a first degree relative with breast cancer.
+
+### Unclassified Plot
+
+V3-V4 is often recommended for microbiome analysis because it produces the least unclassified organisms and genus and species level.  However, this may miss organisms that don't identify well using that region.  The unclassified plot is meant to visualize how many unclassified organisms there are per taxonomic category.
+
+### Unclassified Table
+
+The unclassified table provides additional context, since the plot is visualized as percentages.  This gives us counts of the organisms.
+
+### Prevalence Plots
+
+Prevalence is determined using a binary "present/absent" metric.  If the organism is present in the sample, it is counted as 1 no matter how many times it appears.  Prevalence aims to determine which region is better at detecting a selected organism.
+
+### Abundance Plots
+
+Abundance is determined by dividing the count of an organism by the total organism count for the sample, resulting in a relative metric.  After removing the zeroes, differences in prevalence are visualized with a boxplot. This also aims to determine which region is better at detecting a selected organism.
